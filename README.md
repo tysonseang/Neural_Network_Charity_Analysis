@@ -1,15 +1,38 @@
 # Neural_Network_Charity_Analysis
 
 ## Overview of the Analysis
-Explain the purpose of the analysis
+The purpose of this analysis is to help a nonprofit foundaiton, Alphabet Soup, analyze the impact of its previous donations and vet potential recipients in order to ensure the foundation's resources are being used effictely.
+
+
+develop a deep learning neural network to 
+
+
+to see which organizations should receive donations.
+analyze the impact of each donation and vet potential recipients in order to ensure the foundation's resources are being used effictely.
+
+binary classifier that is capable of predicting whether applicatns will be successful if funded by Alphabet Soup. 
+
+Using a CSV containing more than 34,000 orgnizations that have received funding from Alphabet Soup over the years. Data is tracked on each of these organizations, to include:
+- EIN and NAME—Identification columns
+- APPLICATION_TYPE—Alphabet Soup application type
+- AFFILIATION—Affiliated sector of industry
+- CLASSIFICATION—Government organization classification
+- USE_CASE—Use case for funding
+- ORGANIZATION—Organization type
+- STATUS—Active status
+- INCOME_AMT—Income classification
+- SPECIAL_CONSIDERATIONS—Special consideration for application
+- ASK_AMT—Funding amount requested
+- IS_SUCCESSFUL—Was the money used effectively
+
 
 ## Results
 
 ### Data Preprocessing
-- What variable(s) are considered the target(s) for your model?
+- **What variable(s) are considered the target(s) for your model?**
 Target variable: 'IS_SUCCESSFUL' 
 
-- What variable(s) are considered to be the features for your model?
+- **What variable(s) are considered to be the features for your model?**
 Features: 'STATUS', 'ASK_AMT', 'APPLICATION_TYPE_Other',
        'APPLICATION_TYPE_T19', 'APPLICATION_TYPE_T3', 'APPLICATION_TYPE_T4',
        'APPLICATION_TYPE_T5', 'APPLICATION_TYPE_T6',
@@ -22,22 +45,25 @@ Features: 'STATUS', 'ASK_AMT', 'APPLICATION_TYPE_Other',
        'ORGANIZATION_Association', 'ORGANIZATION_Co-operative',
        'ORGANIZATION_Corporation', 'ORGANIZATION_Trust'
 
-- What variable(s) are neither targets nor features, and should be removed from the input data?
-Dropped variables: 'EIN', 'NAME', 'SPECIAL_CONSIDERATIONS' and 'INCOME_AMOUNT'
+- **What variable(s) are neither targets nor features, and should be removed from the input data?**
+Dropped variables: 'EIN', 'NAME', 'SPECIAL_CONSIDERATIONS', 'INCOME_AMOUNT'
 
 ### Compiling, Training, and Evaluating the Model
-- How many neurons, layers, and activation functions did you select for your neural network model, and why?
+- **How many neurons, layers, and activation functions did you select for your neural network model?**
+Finale_model:
+![final_model](https://github.com/tysonseang/Neural_Network_Charity_Analysis/blob/main/Resources/final_model.png)
 
-- Were you able to achieve the target model performance?
-My best model received an accuracy of XX% with a loss of 
+- **Were you able to achieve the target model performance?**
+My most successful model received an accuracy of roughly 73%. 
 
-- What steps did you take to try and increase model performance?
-Added hidden layers
-Updated Other bin cut off for 'APPLICATION_TYPE' to < 5
-Updated Other bin cut off for 'CLASSIFICATION' to < 750
+- **What steps did you take to try and increase model performance?**
+    - Added a hidden layer
+    - Updated Other bin cut off for 'APPLICATION_TYPE' to < 5
+    - Updated Other bin cut off for 'CLASSIFICATION' to < 750
+    - Attempted various neuron counts for each hidden layer
 
 ## Summary
-Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation.
+My most successful model had 3 hidden layers with 80, 40, and 15 neurons. I use ReLU and Sigmoid activation functions, and earned an accuracy score of 72.5%%. This was a significant imrpovement over my original model, which had a higher loss and lower accuracy score (61.7%). 
 
 Model 1:
 Loss: 0.9341922402381897, Accuracy: 0.617959201335907
@@ -47,7 +73,6 @@ Model 2:
 Loss:1.4600861072540283, Accuracy: 0.5355101823806763
 ![optimization_attemp1](https://github.com/tysonseang/Neural_Network_Charity_Analysis/blob/main/Resources/optimization_attemp1.png)
 
-
 Model 3:
 Loss:0.5521408915519714, Accuracy: 0.7250145673751831
 ![optimization_attempt2](https://github.com/tysonseang/Neural_Network_Charity_Analysis/blob/main/Resources/optimization_attempt2.png)
@@ -55,3 +80,4 @@ Loss:0.5521408915519714, Accuracy: 0.7250145673751831
 Mdel 4:
 Loss:0.5521408915519714, Accuracy: 0.7250145673751831
 ![optimization_attempt3](https://github.com/tysonseang/Neural_Network_Charity_Analysis/blob/main/Resources/optimization_attempt3.png)
+
