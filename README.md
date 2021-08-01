@@ -2,7 +2,7 @@
 
 
 ## Overview of the Analysis
-The purpose of this analysis is to help a nonprofit foundaiton, Alphabet Soup, analyze the impact of its previous donations and vet potential recipients in order to ensure the foundation's resources are being used effictely. The philanthropic foundation is a prolific donor that has raised and donated over 10 billion dollars and funded more than 34,000 organizations over the years. In order to analyze data at this scale, a deep learning neural network with a binary classifier was developed that is capable of prediciting whether an applicant's mission will be successful if funded by the foundation. 
+The purpose of this analysis is to help a nonprofit foundation, Alphabet Soup, analyze the impact of its previous donations and vet potential recipients in order to ensure the foundation's resources are being used effectively. The philanthropic foundation is a prolific donor that has raised and donated over 10 billion dollars and funded more than 34,000 organizations over the years. In order to analyze data at this scale, a deep learning neural network with a binary classifier was developed that is capable of predicting whether an applicant's mission will be successful if funded by the foundation. 
 
 To complete this task, I used Python's TensorFlow library, Pandas, Jupyter Notebook, and a CSV file containing data on each of the 34,000+ organizations, to include:
 - EIN and NAME — Identification columns
@@ -57,7 +57,7 @@ My most successful model received an accuracy score of 73%.
 
 
 ## Summary
-My most successful model had 3 hidden layers with 80, 40, and 15 neurons, respectively. I used ReLU activation functions for my hidden layers and a Sigmoid activation function for my output layer. My model earned an accuracy score of 72.5%%. This was a significant imrpovement over my original model, which had higher training loss and lower accuracy score of 61.7%. 
+My most successful model had 3 hidden layers with 80, 40, and 15 neurons, respectively. I used ReLU activation functions for my hidden layers and a Sigmoid activation function for my output layer. My model earned an accuracy score of 72.5%%. This was a significant improvement over my original model, which had a higher training loss and a lower accuracy score of 61.7%. 
 
 Model 1:
 Loss: 0.9341922402381897, Accuracy: 0.617959201335907
